@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/user_info.css') }}">
+    <title>User Info</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Info User {{ user.id }}</h1>
+        <a href="/show">Home</a>
+    </div>
+    <div class="info">
+        <h3>Full Name: {{ user.first_name }} {{ user.last_name }}</h3>
+        <h3>Email: {{ user.email }}</h3>
+        <h3>Created At: {{ user.created_at }}</h3>
+        <h3>Last Updated: {{ user.updated_at }}</h3>
+    </div>
+    <div class="botones">
+        <a href="/user/{{ user.id }}/edit">Edit</a>
+        <a href="/user/{{ user.id }}/delete">Delete</a>
+    </div>
+</body>
+</html>

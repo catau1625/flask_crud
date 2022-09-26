@@ -1,0 +1,36 @@
+*{
+    padding-left: 3em;
+    padding-right: 3em;
+    margin: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.titulo{
+    text-align: center;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+button > a{
+    text-decoration: None;
+    color: aliceblue;
+}
+.up > button{
+    width: 150px;
+    height: 40px;
+}
+form{
+    margin-left: 3em;
+    margin-right: 3em;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+form > div{
+    margin-top: 1em;
+}
+.enviar{
+    align-self: center;
+}

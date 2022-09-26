@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>Esquema Usuarios</title>
+</head>
+<body>
+    <div class="up">
+        <header class="titulo"><h1>Add a New User</h1></header>
+        <button class="btn btn-secondary"><a href="/show">Home</a></button>
+    </div>
+    <form action="/create_user" method="post">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="fname" class="col-form-label">First Name:</label>
+            </div>
+            <div class="col-auto">
+                <input name="fname" type="text" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+            <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="lname" class="col-form-label">Last Name:</label>
+            </div>
+            <div class="col-auto">
+                <input name="lname" type="text" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+            <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="email" class="col-form-label">Email:</label>
+            </div>
+            <div class="col-auto">
+                <input name="email" type="text" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+        <div class="enviar">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>

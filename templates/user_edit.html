@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Edit</title>
+</head>
+<body>
+    <header><h1>Updating informatio about User {{ actual_info.id }}</h1></header>
+    <div class="content">
+        <form action="/editing/user/{{ actual_info.id }}" method="post">
+            <table>
+                <tr>
+                    <th>
+                        <label for="fname">Nombre:</label>
+                        <input name="fname" type="text" value="{{ actual_info.first_name }}">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="lname">Apellido:</label>
+                        <input name="lname" type="text" value="{{ actual_info.last_name }}">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="email">Email:</label>
+                        <input name="email" type="text" value="{{ actual_info.email }}">
+                    </th>
+                </tr>
+                <tr>
+                    <th><button type="submit">Click to Update</button></th>
+                </tr>
+                <tr>
+                    <th><a href="/user/{{ actual_info.id }}/delete">Delete</a></th>
+                    <th><a href="/show">Home</a></th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
